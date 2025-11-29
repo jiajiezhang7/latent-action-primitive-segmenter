@@ -205,8 +205,15 @@
       <div class="column is-full-width">
         <div class="content">
           <h2 class="title is-3">Method Pipeline</h2>
+          <p>Overview of the LAPS pipeline:</p>
           <p>
-            Our framework consists of two main stages: (1) a lightweight motion tokenizer that encodes motion dynamics, and (2) an unsupervised action segmenter leveraging the novel "Latent Action Energy" metric.
+            <b>(1) Motion Tracking:</b> Extracts motion keypoints from raw video using a point tracker.
+          </p>
+          <p>
+            <b>(2) Action Detection & Segmentation:</b> Generates a latent vector stream via a motion tokenizer and identifies action boundaries to segment latent vectors, video clips, and action codes.
+          </p>
+          <p>
+            <b>(3) Semantic Action Clustering:</b> Groups the segmented latent vectors into meaningful semantic action clusters.
           </p>
           <img src="./static/images/pipeline.jpeg" alt="Method Pipeline" style="width: 100%;">
         </div>
@@ -222,12 +229,12 @@
           Visualization of discovered action primitives through clustering. Each cluster represents a semantically coherent action type.
         </p>
         
-        <h3 class="title is-4">Dataset 1 - Clustering</h3>
+        <h3 class="title is-4"> Exocentric View Dataset</h3>
         <div class="content has-text-centered">
           <img src="./static/images/d01_cluster.png" alt="Dataset 1 Clustering Results" style="width: 100%;">
         </div>
 
-        <h3 class="title is-4">Dataset 2 - Clustering</h3>
+        <h3 class="title is-4"> Top-down View Dataset</h3>
         <div class="content has-text-centered">
           <img src="./static/images/d02_cluster.png" alt="Dataset 2 Clustering Results" style="width: 100%;">
         </div>
